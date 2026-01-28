@@ -3,3 +3,5 @@ The following code flashes each LED sequentially on an 2510SR-1 445 LED bar grap
 Output video:
 https://github.com/user-attachments/assets/7e9ffcf4-f3fa-4c13-8685-d0e9800f1455
 
+The miniproject folder has a more complicated functionality using pulse width modulation (PWM) instead of just flashing with a video included.
+
