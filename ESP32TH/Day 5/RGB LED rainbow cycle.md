@@ -40,6 +40,8 @@ The prints in the code show RGB values per step (helped me debug)
 Optional video title if you post it:
 
 Video:
-https://github.com/user-attachments/assets/51f59ba0-fd14-4e18-b62f-688edf39698d
+https://github.com/user-attachments/assets/df96fffe-0fc2-40df-a637-4841e4e58746
+
+
 
 
