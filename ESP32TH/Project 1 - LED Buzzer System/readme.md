@@ -47,15 +47,15 @@ GPIO27 -> 1kΩ -> BJT Base
 Ground -> BJT Emitter
 
 ### RGB LED (Common Anode)
-3.3V -> Common anode
-R (GPIO15) -> 220Ω -> R pin
-G (GPIO2)  -> 220Ω -> G pin
-B (GPIO0)  -> 220Ω -> B pin
+- 3.3V -> Common anode
+- R (GPIO15) -> 220Ω -> R pin
+- G (GPIO2)  -> 220Ω -> G pin
+- B (GPIO0)  -> 220Ω -> B pin
 
 ### Single-color LEDs:
-Red LED: GPIO14 -> 220Ω -> Anode -> Cathode -> GND
-Green LED: GPIO13 -> 220Ω -> Anode -> Cathode -> GND
-Blue LED: GPIO12 -> 220Ω -> Anode -> Cathode -> GND
+- Red LED: GPIO14 -> 220Ω -> Anode -> Cathode -> GND
+- Green LED: GPIO13 -> 220Ω -> Anode -> Cathode -> GND
+- Blue LED: GPIO12 -> 220Ω -> Anode -> Cathode -> GND
 
 ## Button (with internal pull-up):
 GPIO4 --- Button --- GND
