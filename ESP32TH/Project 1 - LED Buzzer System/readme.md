@@ -40,33 +40,36 @@ This project is a button-controlled system built on the ESP32-Wrover that cycles
 - readme.md
 
 ## Wiring
-        ESP32-Wrover
-       +--------------+
-       |              |
-GPIO27 |----1kΩ----B | S8060 NPN
-                   C|
-                   E|---- GND
-                     |
-                   Buzzer (+5V)
-                   (optional 220Ω)
 
-RGB LED (Common Anode) → connect common pin to 3.3V
-    R (GPIO15) --- 220Ω --- R pin
-    G (GPIO2)  --- 220Ω --- G pin
-    B (GPIO0)  --- 220Ω --- B pin
+### BJT and buzzer
+GPIO27 -> 1kΩ -> BJT Base
+5V rail -> 1kΩ resistor(optional) -> Passive Buzzer -> BJT Collector
+Ground -> BJT Emitter
 
-Single-color LEDs:
-    Red LED   : GPIO14 --- 220Ω --- LED --- GND
-    Green LED : GPIO13 --- 220Ω --- LED --- GND
-    Blue LED  : GPIO12 --- 220Ω --- LED --- GND
+### RGB LED (Common Anode)
+3.3V -> Common anode
+R (GPIO15) -> 220Ω -> R pin
+G (GPIO2)  -> 220Ω -> G pin
+B (GPIO0)  -> 220Ω -> B pin
 
-Button (with internal pull-up):
-    GPIO4 --- Button --- GND
+### Single-color LEDs:
+Red LED: GPIO14 -> 220Ω -> Anode -> Cathode -> GND
+Green LED: GPIO13 -> 220Ω -> Anode -> Cathode -> GND
+Blue LED: GPIO12 -> 220Ω -> Anode -> Cathode -> GND
+
+## Button (with internal pull-up):
+GPIO4 --- Button --- GND
+
+  
+  `
+  self.button=Pin(pin,Pin.IN,Pin.PULL_UP)
+  `
 
 ### Notes:
 - All resistors are current-limiting or base-limiting.
 - RGB LED is common-anode, so connect to 3.3V and the other pins to corresponding GPIO pins as they act as current sinks/ground
-- Buzzer uses transistor as a switch; GPIO27 drives the transistor base.
+- Buzzer uses transistor as a switch as it a 5V device; GPIO27 drives the transistor base.
+- Please use the ESP32 internal pull up configuration as an external resistor is not used here to pull up
 
 
 
