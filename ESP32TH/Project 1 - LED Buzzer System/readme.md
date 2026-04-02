@@ -3,7 +3,6 @@
 This project is a button-controlled system built on the ESP32-Wrover that cycles through four different operating states.
 
 ## Components used
-***
 1. Red LED
 2. Blue LED
 3. Green LED
