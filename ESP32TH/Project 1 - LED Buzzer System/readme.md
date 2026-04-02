@@ -30,6 +30,45 @@ This project is a button-controlled system built on the ESP32-Wrover that cycles
 ## Circuit image
 ![Breadboard image](https://github.com/user-attachments/assets/b69afec7-691b-4448-a702-476aebc9c1c2)
 
+## File structure
+- Main.py
+
+**Modules**
+- Button_module.py
+- RGB_LED_module.py
+
+- readme.md
+
+## Wiring
+        ESP32-Wrover
+       +--------------+
+       |              |
+GPIO27 |----1kΩ----B | S8060 NPN
+                   C|
+                   E|---- GND
+                     |
+                   Buzzer (+5V)
+                   (optional 220Ω)
+
+RGB LED (Common Anode) → connect common pin to 3.3V
+    R (GPIO15) --- 220Ω --- R pin
+    G (GPIO2)  --- 220Ω --- G pin
+    B (GPIO0)  --- 220Ω --- B pin
+
+Single-color LEDs:
+    Red LED   : GPIO14 --- 220Ω --- LED --- GND
+    Green LED : GPIO13 --- 220Ω --- LED --- GND
+    Blue LED  : GPIO12 --- 220Ω --- LED --- GND
+
+Button (with internal pull-up):
+    GPIO4 --- Button --- GND
+
+### Notes:
+- All resistors are current-limiting or base-limiting.
+- RGB LED is common-anode, so connect to 3.3V and the other pins to corresponding GPIO pins as they act as current sinks/ground
+- Buzzer uses transistor as a switch; GPIO27 drives the transistor base.
+
+
 
 
 
