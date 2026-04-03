@@ -26,6 +26,9 @@ This project is a button-controlled system built on the ESP32-Wrover that cycles
 - Future improvements will include interrupts or non-blocking logic for smoother operation
 - To transition states, look out for the prompts that ask you to press the button and hold it for a second then release
 
+## Demo
+[Watch the video here](https://drive.google.com/file/d/11MEM2zqU6sXwgv0sDUn7MeOmi4zYhrB3/view?usp=sharing)
+
 ## Circuit image
 ![Breadboard image](https://github.com/user-attachments/assets/b69afec7-691b-4448-a702-476aebc9c1c2)
 
