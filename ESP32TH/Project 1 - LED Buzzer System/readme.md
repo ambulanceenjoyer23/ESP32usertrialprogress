@@ -42,9 +42,9 @@ This project is a button-controlled system built on the ESP32-Wrover that cycles
 
 ## Wiring
 ### BJT and buzzer
-GPIO27 -> 1kΩ -> BJT Base
-5V rail -> 1kΩ resistor(optional) -> Passive Buzzer -> BJT Collector
-Ground -> BJT Emitter
+- GPIO27 -> 1kΩ -> BJT Base
+- 5V rail -> 1kΩ(optional) -> Passive Buzzer -> BJT Collector
+- Ground -> BJT Emitter
 
 ### RGB LED (Common Anode)
 - 3.3V -> Common anode
