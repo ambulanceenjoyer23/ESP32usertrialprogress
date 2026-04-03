@@ -37,7 +37,6 @@ This project is a button-controlled system built on the ESP32-Wrover that cycles
 - Button_module.py
 - RGB_LED_module.py
 
-- readme.md
 
 ## Wiring
 ### BJT and buzzer
